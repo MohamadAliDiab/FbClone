@@ -68,10 +68,12 @@
             </div>
           </div>
         </div>
-        <form class="navbar-form navbar-right hidden-sm">
+        <form class="navbar-form navbar-right hidden-sm" method="POST">
           <div class="form-group">
             <i class="icon ion-android-search"></i>
             <input id="searchBar" type="text" class="form-control" placeholder="Search for connections">
+            <button type="button" data-toggle="modal" id="searchNow" class="btn btn-info mt-1"
+          data-target="#searchRes" >Search</button>
           </div>
         </form>
         <div class="modal fade" id="searchRes" tabindex="-1" aria-labelledby="searchRes" >

@@ -2,10 +2,10 @@
     include("connection.php");
     session_start();
     $user_id = $_SESSION["id"];
-    $entered_str = $_GET["entered_str"];
+    $entered_str = $_POST["entered_str"];
 
     $query = $connection -> prepare(
-        "SELECT first_name, last_name 
+        "SELECT first_name, last_name , id
         from users 
         where first_name = ? or last_name = ? AND id NOT IN 
             (SELECT blocked_user_id 
