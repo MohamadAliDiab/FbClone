@@ -1,9 +1,9 @@
 <?php
     include("connection.php");
     session_start();
-    $user_id = 4;
+    $user_id = $_SESSION["id"];
 
-    $query = $connection -> prepare ("SELECT u.first_name , u.last_name 
+    $query = $connection -> prepare ("SELECT u.first_name , u.last_name , n.sender_id
     FROM notifications n , users u 
     where n.user_id = ? AND n.sender_id = u.id");
     $query -> bind_param("i", $user_id);

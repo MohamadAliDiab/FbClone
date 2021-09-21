@@ -4,9 +4,9 @@
     $user_id = $_SESSION["id"];
 
     $query = $connection->prepare(
-        "SELECT u.first_name, u.last_name 
-        from connected c, users u
-        Where u.id = c.user_id1 and c.user_id = ?");
+        "SELECT u.first_name, u.last_name , u.id
+        from connected c, users u , blocked b
+        Where u.id = c.user_id1 and c.user_id = ? and c.user_id1");
     $query->bind_param("i" , $user_id);
     $query->execute();
 
