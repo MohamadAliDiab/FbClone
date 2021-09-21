@@ -64,7 +64,6 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-info">Send message</button>
               </div>
             </div>
           </div>
@@ -72,10 +71,27 @@
         <form class="navbar-form navbar-right hidden-sm">
           <div class="form-group">
             <i class="icon ion-android-search"></i>
-            <input type="text" class="form-control" placeholder="Search for connections">
+            <input id="searchBar" type="text" class="form-control" placeholder="Search for connections">
           </div>
         </form>
-
+        <div class="modal fade" id="searchRes" tabindex="-1" aria-labelledby="searchRes" >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <table id="res" class="table table-dark table-bordered text-dark mb-3">
+                  
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div><!-- /.container -->
     </nav>
   </header>
@@ -188,6 +204,7 @@
   <script src="../js/info.js"></script>
   <script src="../js/count-friend.js"></script>
   <script src="../js/notifications.js"></script>
+  <scirpt src="../js/search.js"></script>
 
 </body>
 
